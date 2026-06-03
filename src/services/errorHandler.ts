@@ -1,6 +1,6 @@
 // API error handling utilities
 
-import type { AxiosError } from 'axios';
+import { AxiosError } from 'axios';
 
 export class ApiError extends Error {
   public readonly statusCode?: number;
