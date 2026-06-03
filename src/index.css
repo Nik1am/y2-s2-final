@@ -1,6 +1,5 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import "tailwindcss";
+@config "../tailwind.config.js";
 
 html {
   scroll-behavior: smooth;
@@ -14,4 +13,22 @@ body {
 #root {
   width: 100%;
   min-height: 100vh;
+}
+
+/* Ensure the page background and color follow the dark class on <html> */
+:root {
+  color-scheme: light;
+}
+html.dark {
+  color-scheme: dark;
+}
+
+body {
+  background-color: var(--color-white);
+  color: var(--color-gray-900);
+}
+
+html.dark body {
+  background-color: #0f172a; /* tailwind gray-900 */
+  color: #ffffff;
 }
