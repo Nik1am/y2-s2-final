@@ -1,125 +1,119 @@
-# 📚 School Diary - SPA Application
+# Шкільний щоденник – SPA застосунок
 
-A modern Single Page Application (SPA) built with React, TypeScript, Vite, and Tailwind CSS. This application helps students manage their school subjects, assignments, grades, and profile information in a single, intuitive interface.
+Сучасний односторінковий застосунок (SPA), створений за допомогою React, TypeScript, Vite та Tailwind CSS. Цей застосунок допомагає учням керувати своїми шкільними предметами, завданнями, оцінками та інформацією профілю в єдиному інтуїтивно зрозумілому інтерфейсі.
 
-## 🎯 Features
+## Функціональні можливості
 
-- **Dashboard**: View all subjects with search functionality
-- **Subject Details**: Explore individual subjects with lessons and reviews
-- **Diary**: Track your grades and add new entries
-- **Profile Management**: Edit and manage your student profile with form validation
-- **Dark Mode**: Toggle between light and dark themes
-- **Responsive Design**: Mobile-first approach with Flexbox/Grid
-- **State Management**: Redux Toolkit for global state
-- **Form Validation**: React Hook Form + Zod for robust validation
-- **Component Architecture**: Atomic Design methodology for reusable components
-- **Lazy Loading**: Optimized page loading with React.lazy and Suspense
-- **LocalStorage Persistence**: Save state and preferences locally
+- **Дашборд**: Перегляд усіх предметів з функцією пошуку
+- **Деталі предмета**: Вивчення окремих предметів з уроками та відгуками
+- **Щоденник**: Відстеження своїх оцінок та додавання нових записів
+- **Керування профілем**: Редагування та керування профілем учня з валідацією форм
+- **Темна тема**: Перемикання між світлою та темною темами
+- **Адаптивний дизайн**: Підхід Mobile-first з використанням Flexbox/Grid
+- **Управління станом**: Redux Toolkit для глобального стану
+- **Валідація форм**: React Hook Form + Zod для надійної валідації
+- **Архітектура компонентів**: Методологія атомарного дизайну (Atomic Design) для компонентів, що перевикористовуються
+- **Ліниве завантаження (Lazy Loading)**: Оптимізоване завантаження сторінок за допомогою React.lazy та Suspense
+- **Збереження у LocalStorage**: Локальне збереження стану та налаштувань
 
-## 🛠️ Tech Stack
+## Технологічний стек
 
-- **Frontend Framework**: React 19 with TypeScript (strict mode)
-- **Build Tool**: Vite 8
-- **Styling**: Tailwind CSS v4
-- **State Management**: Redux Toolkit
-- **Routing**: React Router v7
-- **Forms**: React Hook Form + Zod
-- **HTTP Client**: Axios
-- **Code Quality**: ESLint + Prettier
+- **Фронтенд фреймворк**: React 19 з TypeScript (strict mode)
+- **Інструмент збірки**: Vite 8
+- **Стилізація**: Tailwind CSS v4
+- **Управління станом**: Redux Toolkit
+- **Маршрутизація**: React Router v7
+- **Форми**: React Hook Form + Zod
+- **HTTP-клієнт**: Axios
+- **Якість коду**: ESLint + Prettier
 
-## 📁 Project Structure
+## Структура проєкту
+
 
 ```
+
 src/
 ├── components/
-│   ├── atoms/           # Button, Card, Input, Modal, Textarea
-│   ├── molecules/       # SearchBar, SubjectCard, Rating
-│   └── organisms/       # Header, Navigation, ProfileForm
-├── pages/               # Dashboard, SubjectDetail, Diary, Profile, NotFound
-├── hooks/               # useSubjects, useDiary, useDebounce, useTheme
-├── services/            # API service integration
-├── store/               # Redux slices and configuration
-├── types/               # TypeScript interfaces
-├── utils/               # Helpers and localStorage
-└── App.tsx              # Main routing component
+│   ├── atoms/           # Button, Card, Input, Modal, Textarea
+│   ├── molecules/       # SearchBar, SubjectCard, Rating
+│   └── organisms/       # Header, Navigation, ProfileForm
+├── pages/               # Dashboard, SubjectDetail, Diary, Profile, NotFound
+├── hooks/               # useSubjects, useDiary, useDebounce, useTheme
+├── services/            # Інтеграція з API сервісами
+├── store/               # Redux слайси (slices) та конфігурація
+├── types/               # Інтерфейси TypeScript
+├── utils/               # Допоміжні функції та localStorage
+└── App.tsx              # Головний компонент маршрутизації
+
 ```
 
-## 🚀 Getting Started
+## Початок роботи
 
-### Installation
+### Встановлення
 ```bash
 npm install
 ```
 
-### Development
+### Розробка
+
 ```bash
 npm run dev
-# Runs at http://localhost:5173
+# Запускається на http://localhost:5173
 ```
 
-### Build
+### Збірка
+
 ```bash
 npm run build
 ```
 
-### Other Commands
-- `npm run preview` - Preview production build
-- `npm run lint` - Run ESLint
-- `npm run format` - Format with Prettier
-- `npm run type-check` - TypeScript type checking
+### Інші команди
 
-## 📝 Key Features
+* `npm run preview` - Попередній перегляд продакшн-збірки
+* `npm run lint` - Запуск ESLint
+* `npm run format` - Форматування за допомогою Prettier
+* `npm run type-check` - Перевірка типів TypeScript
 
-### Custom Hooks
-- **useSubjects()**: Fetch subjects from API
-- **useDiary()**: Manage diary entries with persistence
-- **useDebounce()**: Search optimization
-- **useTheme()**: Dark mode management
+## Ключові особливості
 
-### State Management
-- Redux Toolkit for auth and diary state
-- Context-based theme switching
-- LocalStorage for persistence
+### Кастомні хуки
 
-### Form Validation
-- React Hook Form for efficient forms
-- Zod for runtime validation
-- Real-time error feedback
+* **useSubjects()**: Отримання предметів з API
+* **useDiary()**: Керування записами щоденника зі збереженням стану
+* **useDebounce()**: Оптимізація пошуку
+* **useTheme()**: Управління темною темою
 
-### Responsive Design
-- Mobile-first with Tailwind CSS
-- Grid: 1 col (mobile) → 3 cols (desktop)
-- Touch-friendly interactions
+### Управління станом
 
-## 🎨 Atomic Design
+* Redux Toolkit для стану авторизації та щоденника
+* Перемикання тем на основі Context API
+* LocalStorage для збереження даних
 
-Components follow atomic design pattern:
-- **Atoms**: Basic reusable elements
-- **Molecules**: Simple compositions
-- **Organisms**: Complex combinations
-- **Pages**: Complete screens
+### Валідація форм
 
-## 🌙 Dark Mode
+* React Hook Form для ефективної роботи з формами
+* Zod для валідації під час виконання (runtime)
+* Зворотний зв'язок щодо помилок у реальному часі
 
-Toggle dark mode via header button. Theme preference persists in localStorage.
+### Адаптивний дизайн
 
-## 🔒 TypeScript Strict Mode
+* Mobile-first з Tailwind CSS
+* Сітка (Grid): 1 колонка (мобільні) → 3 колонки (десктоп)
+* Взаємодії, адаптовані для сенсорних екранів
 
-All files use strict TypeScript mode for type safety.
+## Атомарний дизайн
 
-## 🎓 Educational Features
+Компоненти слідують патерну атомарного дизайну:
 
-Demonstrating:
-- Modern React patterns
-- Component composition
-- State management
-- Form validation
-- API integration
-- Responsive design
-- Git version control
+* **Атоми (Atoms)**: Базові елементи, що перевикористовуються
+* **Молекули (Molecules)**: Прості композиції
+* **Організми (Organisms)**: Складні комбінації
+* **Сторінки (Pages)**: Повноцінні екрани
 
-## 💻 Browser Support
+## Темна тема
 
-- Chrome/Edge (latest)
-- Firefox (latest)
-- Safari (latest)
+Увімкнення темної теми через кнопку в хедері. Бажана тема зберігається у localStorage.
+
+## Строгий режим TypeScript (Strict Mode)
+
+Усі файли використовують строгий режим TypeScript для безпеки типів.
